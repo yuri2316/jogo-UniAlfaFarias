@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Jogo da <span>Memória</span></h1>
+    <p>Encontre todos os pares antes do tempo acabar!</p>
+  </header>
+
+  <div class="diff-row">
+    <button class="diff-btn active" data-grid="4x4">Fácil (4×4)</button>
+    <button class="diff-btn" data-grid="4x5">Médio (4×5)</button>
+    <button class="diff-btn" data-grid="6x5">Difícil (6×5)</button>
+  </div>
+
+  <div class="hud">
+    <div class="stat">
+      <div class="stat-label">Tentativas</div>
+      <div class="stat-value" id="moves">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Pares</div>
+      <div class="stat-value" id="pairs">0 / 8</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Tempo</div>
+      <div class="stat-value" id="timer">0s</div>
+    </div>
+  </div>
+
+  <div id="board"></div>
+
+  <div class="controls">
+    <button id="btn-restart">🔄 Reiniciar</button>
+  </div>
+
+  <div id="win-overlay">
+    <div class="win-box">
+      <div class="win-emoji">🎉</div>
+      <h2>Você venceu!</h2>
+      <p id="win-msg">Parabéns!</p>
+      <button id="btn-play-again">Jogar novamente</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
